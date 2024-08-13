@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m , o;
+    cin >> n >> m >> o;
+    int matrix1[n][m];
+    int matrix2[m][o];
+    int matrix3[n][o];
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cin >> matrix1[i][j];
+        }
+    }
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < o; j++){
+            cin >> matrix2[i][j];
+        }
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < o; j++){
+            matrix3[i][j] = 0;
+            for(int k = 0; k < m; k++){
+                matrix3[i][j] += matrix1[i][k]*matrix2[k][j];
+            }
+        }
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < o; j++){
+            cout << matrix3[i][j]<<" ";
+        }cout << endl;
+    }
+
+    return 0;
+}
