@@ -93,8 +93,15 @@ int main() {
     printList(head);
     cout<<endl;
     
+    cout<<"Enter data to insert : "<<endl;
+    int a,b;
+    cin >> a >> b;
+    string n;
+    cin >> n;
+    
+    cout<<endl;
     cout << "After inserting a new node at specified position : "<<endl;
-    insertAtPosition(head,3,12,"Vrind");
+    insertAtPosition(head,a,b,n);
     printList(head);
     
     cout<<endl;
